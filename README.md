@@ -81,6 +81,32 @@ console.log(str)
 `
 
 #### 箭头函数
-默认返回最后的内容
+* 使函数更为简短，同时省去绑定this的麻烦
+原来的函数写成
+`const myFun = function(name){
+  console.log(name)
+}
+`现在的函数写成
+`const myFun = (name) =>{
+  console.log(name)
+}
+myFun('lj')
 `
+如果参数只有一个，那么可以把参数括号去掉，写成
+
+`const myFun = name =>{
+  console.log(name)
+}
+`
+同时如果里面只有一条，那么花括号也可以省去。
+`const myFun = name =>console.log(name)
+`
+如果希望输出两倍name
+`const myFun = name =>{
+  return name +name
+}
+console.log(myFun('lg'))
+`
+但是箭头函数有一个好处，默认就是返回最后的值，所以可以写成
+`const myFun = name => name + name
 `
