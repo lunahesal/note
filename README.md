@@ -23,9 +23,11 @@
 ## 面向对象编程
 * class 关键字是es6的新特性，定义‘类’
 * constructor 构造函数 对象被创建的时候， 自动被呼叫的一个方法
-* `class Person{
+* `
+class Person{
   constructor(){
     console.log(1)
+
   }
   say(){
     console.log(2)
