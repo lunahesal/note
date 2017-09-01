@@ -23,7 +23,7 @@
 ## 面向对象编程
 * class 关键字是es6的新特性，定义‘类’
 * constructor 构造函数 对象被创建的时候， 自动被呼叫的一个方法
-* `
+* ```js
   class Person{
     constructor(){
       console.log(1)
@@ -33,9 +33,9 @@
     }
     let lj = new Person;
   }
-`
+```
 ### 如何使用类的继承？
-* `
+* ```js
 class Person{
   sayWords(){
     console.log('I am humen')
@@ -50,7 +50,7 @@ let i= 0
 let mm = new women
 mm.sayMe()
 mm.sayWords()
-`
+```
 * 首先要有父类Person，再写子类：class 子类名 extends 父类名{}
 * extends 本意“拓展”，这里‘继承’
 
@@ -76,15 +76,17 @@ mm.sayWords()
 
 #### 模板字符串
 * 倒引号（波浪号的键）  ${变量名}
-* ` let name = 'lj'；
+* ```js
+ let name = 'lj'；
 let str = `my name is ${name}`；
 console.log(str)
-`
+```
 
 #### 箭头函数
 * 使函数更为简短，同时省去绑定this的麻烦
 原来的函数写成
-* ` const myFun = function(name){
+* ```js
+ const myFun = function(name){
   console.log(name)
 }
 `
@@ -93,22 +95,26 @@ console.log(str)
   console.log(name)
 }
 myFun('lj')
-`
+```
 * 如果参数只有一个，那么可以把参数括号去掉，写成
 
-* ` const myFun = name =>{
+* ```js
+ const myFun = name =>{
   console.log(name)
 }
-`
+```
 * 同时如果里面只有一条，那么花括号也可以省去。
-* `const myFun = name =>console.log(name)
-`
+* ```js
+const myFun = name =>console.log(name)
+```
 * 如果希望输出两倍name
-* ` const myFun = name =>{
+* ```js
+ const myFun = name =>{
   return name +name
 }
 console.log(myFun('lg'))
-`
+```
 * 但是箭头函数有一个好处，默认就是返回最后的值，所以可以写成
-* ` const myFun = name => name + name
-`
+* ```js
+ const myFun = name => name + name
+```
