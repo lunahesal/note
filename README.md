@@ -35,6 +35,7 @@
   }
 ```
 ### 如何使用类的继承？
+
 * ```js
 class Person{
   sayWords(){
@@ -90,6 +91,7 @@ console.log(str)
   console.log(name)
 }
 `
+
 * 现在的函数写成
 * ` const myFun = (name) =>{
   console.log(name)
