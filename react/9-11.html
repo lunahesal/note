@@ -227,71 +227,80 @@
 <li>componentDidUpdate<h4 id="&#x4F5C;&#x7528;">&#x4F5C;&#x7528;</h4>
 </li>
 <li>&#x81EA;&#x52A8;&#x89E6;&#x53D1;http&#x8BF7;&#x6C42;</li>
-<li>&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x7A0B;&#x5E8F;&#x5783;&#x573E;<h4 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h4>
-```js
-import React, { Component } from &apos;react&apos;
-import &apos;./app.css&apos;</li>
+<li>&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x7A0B;&#x5E8F;&#x5783;&#x573E;</li>
 </ul>
-<p>class App extends Component {</p>
-<p>  state = {
-    count: 0
+<h4 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  state = {
+    count: <span class="hljs-number">0</span>
   }
   componentWillMount = () =&gt; {
-    console.log(&apos;componentWillMount....&apos;)
-  }</p>
-<p>  componentDidMount = () =&gt; {
-    console.log(&apos;componentDidMount....&apos;)
-  }</p>
-<p>  handleClick = () =&gt; {
-    this.setState({
-      count: this.state.count + 1
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentWillMount....&apos;</span>)
+  }
+
+  componentDidMount = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentDidMount....&apos;</span>)
+  }
+
+  handleClick = () =&gt; {
+    <span class="hljs-keyword">this</span>.setState({
+      count: <span class="hljs-keyword">this</span>.state.count + <span class="hljs-number">1</span>
     })
-  }</p>
-<p>  componentWillUpdate = ()  =&gt; {
-    console.log(&apos;componentWillUpdate...&apos;)
-  }</p>
-<p>  componentDidUpdate = () =&gt; {
-    console.log(&apos;componentDidUpdate...&apos;)
-  }</p>
-<p>  render () {
-    console.log(&apos;render.......&apos;)
-    return (
-      <div classname="app">
-        <div onclick="{this.handleClick}" classname="count">
+  }
+
+  componentWillUpdate = ()  =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentWillUpdate...&apos;</span>)
+  }
+
+  componentDidUpdate = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentDidUpdate...&apos;</span>)
+  }
+
+  render () {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;render.......&apos;</span>)
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;app&apos;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleClick}</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;count&apos;</span>&gt;</span>
           {this.state.count}
-        </div>
-      &lt;/div&gt;
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
     )
   }
-}</div></p>
-<p>export default App</p>
-<pre><code>
-### &#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;
-- this.&#x53D8;&#x91CF;&#x540D;
-### &#x8DEF;&#x7531;&#xFF08;Route)&#x539F;&#x7406;
-- &#x4EC0;&#x4E48;&#x662F;&#x8DEF;&#x7531;&#xFF1F;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;url&#xFF0C;&#x7F51;&#x7AD9;&#x5C31;&#x4F1A;&#x77E5;&#x9053;&#x8981;&#x53BB;&#x6267;&#x884C;&#x54EA;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x8DEF;&#x7531;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BBF;&#x95EE;example.com/about,&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x80FD;&#x6253;&#x5F00;about.html&#x9875;&#x9762;&#x3002;
-- &#x4F20;&#x7EDF;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x8DEF;&#x7531;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x679C;url&#x662F;example.com/about.html,&#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5C31;&#x662F;&#x6709;&#x4E00;&#x4E2A;about.html&#x9875;&#x9762;&#xFF0C;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x540E;&#x7AEF;&#x8FBE;&#x6210;&#x7684;&#x3002;
-### &#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;
-- &#x5728;react&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;html&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E00;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x53EB;&#x505A;SPA&#xFF08;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF09;&#x3002;&#x5B83;&#x7684;&#x5929;&#x7136;&#x7279;&#x70B9;&#x5C31;&#x51B3;&#x5B9A;&#xFF0C;&#x8DEF;&#x7531;&#x9700;&#x8981;&#x5728;&#x524D;&#x7AEF;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x5C31;&#x6D89;&#x53CA;&#x5230;react-router&#x7684;&#x4F7F;&#x7528;&#x3002;&#x6709;&#x4E86;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF0C;&#x660E;&#x660E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;html&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x7528;&#x6237;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x53EF;&#x4EE5;&#x8DDF;&#x591A;&#x9875;&#x9762;&#x5E94;&#x7528;&#x4E00;&#x6837;&#x4E86;&#x3002;
-###&#x57FA;&#x672C;&#x4F8B;&#x5B50;
-- react-router &#x662F;&#x4E00;&#x4E2A; npm &#x5305;&#x3002;&#x5B98;&#x7F51;&#x5728;&#xFF1A;https://reacttraining.com/react-router/web
-- &#x53EF;&#x4EE5;&#x901A;&#x8FC7;
-</code></pre><p>npm i react-router-dom</p>
-<pre><code>- &#x8FDB;&#x884C;&#x5B89;&#x88C5;
-```js
-import React, { Component } from &apos;react&apos;
-import &apos;./app.css&apos;
-import {
-  BrowserRouter as Router,
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App
+</code></pre>
+<h3 id="&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;">&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;</h3>
+<ul>
+<li>this.&#x53D8;&#x91CF;&#x540D;<h3 id="&#x8DEF;&#x7531;&#xFF08;route&#x539F;&#x7406;">&#x8DEF;&#x7531;&#xFF08;Route)&#x539F;&#x7406;</h3>
+</li>
+<li>&#x4EC0;&#x4E48;&#x662F;&#x8DEF;&#x7531;&#xFF1F;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;url&#xFF0C;&#x7F51;&#x7AD9;&#x5C31;&#x4F1A;&#x77E5;&#x9053;&#x8981;&#x53BB;&#x6267;&#x884C;&#x54EA;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x8DEF;&#x7531;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BBF;&#x95EE;example.com/about,&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x80FD;&#x6253;&#x5F00;about.html&#x9875;&#x9762;&#x3002;</li>
+<li>&#x4F20;&#x7EDF;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x8DEF;&#x7531;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x679C;url&#x662F;example.com/about.html,&#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5C31;&#x662F;&#x6709;&#x4E00;&#x4E2A;about.html&#x9875;&#x9762;&#xFF0C;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x540E;&#x7AEF;&#x8FBE;&#x6210;&#x7684;&#x3002;<h3 id="&#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;">&#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;</h3>
+</li>
+<li>&#x5728;react&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;html&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E00;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x53EB;&#x505A;SPA&#xFF08;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF09;&#x3002;&#x5B83;&#x7684;&#x5929;&#x7136;&#x7279;&#x70B9;&#x5C31;&#x51B3;&#x5B9A;&#xFF0C;&#x8DEF;&#x7531;&#x9700;&#x8981;&#x5728;&#x524D;&#x7AEF;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x5C31;&#x6D89;&#x53CA;&#x5230;react-router&#x7684;&#x4F7F;&#x7528;&#x3002;&#x6709;&#x4E86;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF0C;&#x660E;&#x660E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;html&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x7528;&#x6237;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x53EF;&#x4EE5;&#x8DDF;&#x591A;&#x9875;&#x9762;&#x5E94;&#x7528;&#x4E00;&#x6837;&#x4E86;&#x3002;<h3 id="&#x57FA;&#x672C;&#x4F8B;&#x5B50;">&#x57FA;&#x672C;&#x4F8B;&#x5B50;</h3>
+</li>
+<li>react-router &#x662F;&#x4E00;&#x4E2A; npm &#x5305;&#x3002;&#x5B98;&#x7F51;&#x5728;&#xFF1A;<a href="https://reacttraining.com/react-router/web" target="_blank">https://reacttraining.com/react-router/web</a></li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</li>
+</ul>
+<p>npm i react-router-dom</p>
+<p>&#x8FDB;&#x884C;&#x5B89;&#x88C5;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+<span class="hljs-keyword">import</span> {
+  BrowserRouter <span class="hljs-keyword">as</span> Router,
   Route
- } from &apos;react-router-dom&apos;
+ } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
 
-import Home from &apos;../Home/Home&apos;
-import About from &apos;../About/About&apos;
+<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../Home/Home&apos;</span>
+<span class="hljs-keyword">import</span> About <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../About/About&apos;</span>
 
-class App extends Component {
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
   render () {
-    return (
+    <span class="hljs-keyword">return</span> (
       &lt;Router&gt;
         &lt;div&gt;
           &lt;Route path=&apos;/home&apos; component={Home} /&gt;
@@ -302,7 +311,8 @@ class App extends Component {
   }
 }
 export default App
-</code></pre><ul>
+</code></pre>
+<ul>
 <li>&#x5982;&#x679C;&#x8DEF;&#x7531;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;<pre><code class="lang-js">&lt;Router&gt;
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
@@ -389,7 +399,7 @@ export default App
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第五章：生命周期函数","level":"1.6","depth":1,"previous":{"title":"第四章：state","level":"1.5","depth":1,"path":"react/README3.md","ref":"react/README3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/9-11.md","mtime":"2017-09-18T15:22:08.835Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T15:22:14.016Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第五章：生命周期函数","level":"1.6","depth":1,"previous":{"title":"第四章：state","level":"1.5","depth":1,"path":"react/README3.md","ref":"react/README3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/9-11.md","mtime":"2017-09-18T15:26:40.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T15:26:49.397Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
