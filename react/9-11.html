@@ -228,7 +228,7 @@
 </li>
 <li>&#x81EA;&#x52A8;&#x89E6;&#x53D1;http&#x8BF7;&#x6C42;</li>
 <li>&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x7A0B;&#x5E8F;&#x5783;&#x573E;<h4 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h4>
-```
+```js
 import React, { Component } from &apos;react&apos;
 import &apos;./app.css&apos;</li>
 </ul>
@@ -278,73 +278,78 @@ import &apos;./app.css&apos;</li>
 - &#x53EF;&#x4EE5;&#x901A;&#x8FC7;
 </code></pre><p>npm i react-router-dom</p>
 <pre><code>- &#x8FDB;&#x884C;&#x5B89;&#x88C5;
-</code></pre><p>import React, { Component } from &apos;react&apos;
+```js
+import React, { Component } from &apos;react&apos;
 import &apos;./app.css&apos;
 import {
   BrowserRouter as Router,
   Route
- } from &apos;react-router-dom&apos;</p>
-<p>import Home from &apos;../Home/Home&apos;
-import About from &apos;../About/About&apos;</p>
-<p>class App extends Component {</p>
-<p>  render () {
-    return (
-      <router>
-        <div>
-          <route path="/home" component="{Home}">
-          <route path="/about" component="{About}">
-        </route></route></div>
-      </router>
-    )
-  }
-}</p>
-<p>export default App</p>
-<pre><code>
-- &#x5982;&#x679C;&#x8DEF;&#x7531;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;
-</code></pre><p><router></router></p>
-<p><div>
-  <route path="/" component="{Home}">
-  <route path="/about" component="{About}">
-</route></route></div>
-&lt;/Router&gt;</p>
-<pre><code>- &#x90A3;&#x4E48;&#x5F53;&#x6211;&#x4EEC;&#x8BBF;&#x95EE; /about &#x5F53;&#x7136;&#xFF0C;About &#x7EC4;&#x4EF6;&#x4F1A;&#x663E;&#x793A;&#xFF0C;&#x4F46;&#x662F; router &#x5728;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E; /about &#x4E2D;&#x4E5F;&#x5305;&#x542B; / &#x6240;&#x4EE5;&#xFF0C;Home &#x4E5F;&#x4F1A;&#x88AB;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;
+ } from &apos;react-router-dom&apos;
 
-- &#x4F46;&#x662F;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x6709;&#x8FD9;&#x79CD;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0; exact &#x6765;&#x89E3;&#x51B3;&#x3002;
+import Home from &apos;../Home/Home&apos;
+import About from &apos;../About/About&apos;
 
-- &#x5982;&#x679C;&#x5199;&#x6210;
-</code></pre><p><router></router></p>
-<p><div>
-  <route exact="" path="/" component="{Home}">
-  <route path="/about" component="{About}">
-</route></route></div>
-&lt;/Router&gt;</p>
-<pre><code>
-- &#x90A3;&#x4E48;&#x6587;&#x4EF6;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;exact &#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#xFF1A;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x3002;
-
-
-
-### link &#x7684;&#x4F7F;&#x7528;
-- &#x7528;React Router&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x7528;a&#x6807;&#x7B7E;&#xFF08;&#x9664;&#x975E;&#x94FE;&#x5230;&#x5916;&#x7AD9;&#xFF09;&#xFF0C;&#x800C;&#x662F;&#x7528;link
-- &#x7528;link&#xFF0C;&#x9875;&#x9762;&#x4E0D;&#x5237;&#x65B0;&#xFF0C;state&#x4E0D;&#x4F1A;&#x91CD;&#x7F6E;
-- Link &#x5728;&#x9875;&#x9762;&#x4E0A;&#x663E;&#x793A;&#x540E;&#xFF0C;&#x901A;&#x8FC7; Chrome &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C31;&#x53D8;&#x6210;&#x4E86; a &#x6807;&#x7B7E;&#x3002;&#x4F46;&#x662F;&#xFF0C;Link &#x8DDF; a &#x6807;&#x7B7E;&#x6709;&#x660E;&#x663E;&#x533A;&#x522B;&#xFF0C;&#x5C31;&#x662F;&#x70B9; Link &#x8FDB;&#x884C;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#xFF0C;&#x9875;&#x9762;&#x4E0D;&#x5237;&#x65B0;&#x3002;&#x800C;&#x9875;&#x9762;&#x5237;&#x65B0;&#x9664;&#x4E86;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x4E0D;&#x597D;&#x4E4B;&#x5916;&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x662F;&#x4F1A;&#x5BFC;&#x81F4; state &#x503C;&#x5168;&#x90E8;&#x91CD;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x4F7F;&#x7528; a &#x6807;&#x7B7E;&#x3002;
-
-#### &#x4EE3;&#x7801;
-
-Header.js
-</code></pre><p>import React, { Component } from &apos;react&apos;
-import { Link } from &apos;react-router-dom&apos;</p>
-<p>class Header extends Component {
+class App extends Component {
   render () {
     return (
-      <div classname="header">
-        <link to="/">&#x9996;&#x9875;
-        <link to="/about">&#x5173;&#x4E8E;
-      </div>
+      &lt;Router&gt;
+        &lt;div&gt;
+          &lt;Route path=&apos;/home&apos; component={Home} /&gt;
+          &lt;Route path=&apos;/about&apos; component={About} /&gt;
+        &lt;/div&gt;
+      &lt;/Router&gt;
     )
   }
-}</p>
-<p>export default Header
-```</p>
+}
+export default App
+</code></pre><ul>
+<li>&#x5982;&#x679C;&#x8DEF;&#x7531;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;<pre><code class="lang-js">&lt;Router&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/about&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{About}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+</span></code></pre>
+</li>
+<li><p>&#x90A3;&#x4E48;&#x5F53;&#x6211;&#x4EEC;&#x8BBF;&#x95EE; /about &#x5F53;&#x7136;&#xFF0C;About &#x7EC4;&#x4EF6;&#x4F1A;&#x663E;&#x793A;&#xFF0C;&#x4F46;&#x662F; router &#x5728;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E; /about &#x4E2D;&#x4E5F;&#x5305;&#x542B; / &#x6240;&#x4EE5;&#xFF0C;Home &#x4E5F;&#x4F1A;&#x88AB;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+</li>
+<li><p>&#x4F46;&#x662F;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x6709;&#x8FD9;&#x79CD;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0; exact &#x6765;&#x89E3;&#x51B3;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x5199;&#x6210;</p>
+<pre><code class="lang-js">&lt;Router&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/about&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{About}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+</span></code></pre>
+</li>
+<li><p>&#x90A3;&#x4E48;&#x6587;&#x4EF6;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;exact &#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#xFF1A;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x3002;</p>
+</li>
+</ul>
+<h3 id="link-&#x7684;&#x4F7F;&#x7528;">link &#x7684;&#x4F7F;&#x7528;</h3>
+<ul>
+<li>&#x7528;React Router&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x7528;a&#x6807;&#x7B7E;&#xFF08;&#x9664;&#x975E;&#x94FE;&#x5230;&#x5916;&#x7AD9;&#xFF09;&#xFF0C;&#x800C;&#x662F;&#x7528;link</li>
+<li>&#x7528;link&#xFF0C;&#x9875;&#x9762;&#x4E0D;&#x5237;&#x65B0;&#xFF0C;state&#x4E0D;&#x4F1A;&#x91CD;&#x7F6E;</li>
+<li>Link &#x5728;&#x9875;&#x9762;&#x4E0A;&#x663E;&#x793A;&#x540E;&#xFF0C;&#x901A;&#x8FC7; Chrome &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C31;&#x53D8;&#x6210;&#x4E86; a &#x6807;&#x7B7E;&#x3002;&#x4F46;&#x662F;&#xFF0C;Link &#x8DDF; a &#x6807;&#x7B7E;&#x6709;&#x660E;&#x663E;&#x533A;&#x522B;&#xFF0C;&#x5C31;&#x662F;&#x70B9; Link &#x8FDB;&#x884C;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#xFF0C;&#x9875;&#x9762;&#x4E0D;&#x5237;&#x65B0;&#x3002;&#x800C;&#x9875;&#x9762;&#x5237;&#x65B0;&#x9664;&#x4E86;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x4E0D;&#x597D;&#x4E4B;&#x5916;&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x662F;&#x4F1A;&#x5BFC;&#x81F4; state &#x503C;&#x5168;&#x90E8;&#x91CD;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x4F7F;&#x7528; a &#x6807;&#x7B7E;&#x3002;</li>
+</ul>
+<h4 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h4>
+<p>Header.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Header</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;header&apos;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&apos;/&apos;</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&apos;/about&apos;</span>&gt;</span>&#x5173;&#x4E8E;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Header
+</code></pre>
 
                                 
                                 </section>
@@ -384,7 +389,7 @@ import { Link } from &apos;react-router-dom&apos;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第五章：生命周期函数","level":"1.6","depth":1,"previous":{"title":"第四章：state","level":"1.5","depth":1,"path":"react/README3.md","ref":"react/README3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/9-11.md","mtime":"2017-09-18T13:21:05.399Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T15:18:39.334Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第五章：生命周期函数","level":"1.6","depth":1,"previous":{"title":"第四章：state","level":"1.5","depth":1,"path":"react/README3.md","ref":"react/README3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/9-11.md","mtime":"2017-09-18T15:22:08.835Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T15:22:14.016Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
