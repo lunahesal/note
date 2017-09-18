@@ -284,43 +284,42 @@
 <li>&#x5728;react&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;html&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E00;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x53EB;&#x505A;SPA&#xFF08;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF09;&#x3002;&#x5B83;&#x7684;&#x5929;&#x7136;&#x7279;&#x70B9;&#x5C31;&#x51B3;&#x5B9A;&#xFF0C;&#x8DEF;&#x7531;&#x9700;&#x8981;&#x5728;&#x524D;&#x7AEF;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x5C31;&#x6D89;&#x53CA;&#x5230;react-router&#x7684;&#x4F7F;&#x7528;&#x3002;&#x6709;&#x4E86;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF0C;&#x660E;&#x660E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;html&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x7528;&#x6237;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x53EF;&#x4EE5;&#x8DDF;&#x591A;&#x9875;&#x9762;&#x5E94;&#x7528;&#x4E00;&#x6837;&#x4E86;&#x3002;<h3 id="&#x57FA;&#x672C;&#x4F8B;&#x5B50;">&#x57FA;&#x672C;&#x4F8B;&#x5B50;</h3>
 </li>
 <li>react-router &#x662F;&#x4E00;&#x4E2A; npm &#x5305;&#x3002;&#x5B98;&#x7F51;&#x5728;&#xFF1A;<a href="https://reacttraining.com/react-router/web" target="_blank">https://reacttraining.com/react-router/web</a></li>
-<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;
+npm i react-router-dom
+&#x8FDB;&#x884C;&#x5B89;&#x88C5;
+```js
+import React, { Component } from &apos;react&apos;
+import &apos;./app.css&apos;
+import {
+BrowserRouter as Router,
+Route
+} from &apos;react-router-dom&apos;</li>
 </ul>
-<p>npm i react-router-dom</p>
-<p>&#x8FDB;&#x884C;&#x5B89;&#x88C5;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
-<span class="hljs-keyword">import</span> {
-  BrowserRouter <span class="hljs-keyword">as</span> Router,
-  Route
- } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
-
-<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../Home/Home&apos;</span>
-<span class="hljs-keyword">import</span> About <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../About/About&apos;</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+<p>import Home from &apos;../Home/Home&apos;
+import About from &apos;../About/About&apos;</p>
+<p>class App extends Component {
   render () {
-    <span class="hljs-keyword">return</span> (
-      &lt;Router&gt;
-        &lt;div&gt;
-          &lt;Route path=&apos;/home&apos; component={Home} /&gt;
-          &lt;Route path=&apos;/about&apos; component={About} /&gt;
-        &lt;/div&gt;
-      &lt;/Router&gt;
+    return (
+      <router>
+        <div>
+          <route path="/home" component="{Home}">
+          <route path="/about" component="{About}">
+        </route></route></div>
+      </router>
     )
   }
 }
-export default App
-</code></pre>
-<ul>
-<li>&#x5982;&#x679C;&#x8DEF;&#x7531;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;<pre><code class="lang-js">&lt;Router&gt;
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/about&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{About}</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
-</span></code></pre>
-</li>
+export default App</p>
+<pre><code>
+- &#x5982;&#x679C;&#x8DEF;&#x7531;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;
+```js
+  &lt;Router&gt;
+    &lt;div&gt;
+      &lt;Route path=&apos;/&apos; component={Home} /&gt;
+      &lt;Route path=&apos;/about&apos; component={About} /&gt;
+    &lt;/div&gt;
+  &lt;/Router&gt;
+</code></pre><ul>
 <li><p>&#x90A3;&#x4E48;&#x5F53;&#x6211;&#x4EEC;&#x8BBF;&#x95EE; /about &#x5F53;&#x7136;&#xFF0C;About &#x7EC4;&#x4EF6;&#x4F1A;&#x663E;&#x793A;&#xFF0C;&#x4F46;&#x662F; router &#x5728;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E; /about &#x4E2D;&#x4E5F;&#x5305;&#x542B; / &#x6240;&#x4EE5;&#xFF0C;Home &#x4E5F;&#x4F1A;&#x88AB;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
 </li>
 <li><p>&#x4F46;&#x662F;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x6709;&#x8FD9;&#x79CD;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0; exact &#x6765;&#x89E3;&#x51B3;&#x3002;</p>
@@ -399,7 +398,7 @@ export default App
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第五章：生命周期函数","level":"1.6","depth":1,"previous":{"title":"第四章：state","level":"1.5","depth":1,"path":"react/README3.md","ref":"react/README3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/9-11.md","mtime":"2017-09-18T15:26:40.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T15:26:49.397Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第五章：生命周期函数","level":"1.6","depth":1,"previous":{"title":"第四章：state","level":"1.5","depth":1,"path":"react/README3.md","ref":"react/README3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/9-11.md","mtime":"2017-09-18T15:28:40.363Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T15:28:46.996Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
