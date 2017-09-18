@@ -1,0 +1,21 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve ./content",
+    "build":"gitbook build ./content ./gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunahesal/note.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunahesal/note/issues"
+  },
+  "homepage": "https://github.com/lunahesal/note#readme"
+}
