@@ -23,7 +23,7 @@
 ## 面向对象编程
 * class 关键字是es6的新特性，定义‘类’
 * constructor 构造函数 对象被创建的时候， 自动被呼叫的一个方法
-* ```js
+```js
   class Person{
     constructor(){
       console.log(1)
@@ -36,7 +36,7 @@
 ```
 ### 如何使用类的继承？
 
-* ```js
+```js
 class Person{
   sayWords(){
     console.log('I am humen')
@@ -77,7 +77,7 @@ mm.sayWords()
 
 #### 模板字符串
 * 倒引号（波浪号的键）  ${变量名}
-* ```js
+```js
  let name = 'lj'；
 let str = `my name is ${name}`；
 console.log(str)
@@ -86,37 +86,38 @@ console.log(str)
 #### 箭头函数
 * 使函数更为简短，同时省去绑定this的麻烦
 原来的函数写成
-* ```js
+```js
  const myFun = function(name){
   console.log(name)
 }
-`
+```
 
 * 现在的函数写成
-* ` const myFun = (name) =>{
+```js
+const myFun = (name) =>{
   console.log(name)
 }
 myFun('lj')
 ```
 * 如果参数只有一个，那么可以把参数括号去掉，写成
 
-* ```js
+```js
  const myFun = name =>{
   console.log(name)
 }
 ```
 * 同时如果里面只有一条，那么花括号也可以省去。
-* ```js
+```js
 const myFun = name =>console.log(name)
 ```
 * 如果希望输出两倍name
-* ```js
+```js
  const myFun = name =>{
   return name +name
 }
 console.log(myFun('lg'))
 ```
 * 但是箭头函数有一个好处，默认就是返回最后的值，所以可以写成
-* ```js
+```js
  const myFun = name => name + name
 ```

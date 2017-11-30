@@ -50,10 +50,11 @@ export default App
 #### 打怪
 
 我们要展示一系列的内容，例如博客就会用到如下的 url
-
+```
 example.com/post/1
 example.com/post/2
 ...
+```
 那么对应的路由如何写呢？这个就涉及到了路由传参的技巧。
 
 实现首页上的文章列表
